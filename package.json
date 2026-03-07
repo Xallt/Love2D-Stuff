@@ -1,0 +1,16 @@
+{
+  "name": "love2d-stuff",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:games": "node scripts/build-games.cjs",
+    "prebuild": "npm run build:games",
+    "dev": "npm run build:games && vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "love.js": "^11.4.1",
+    "vite": "^6.0.0"
+  }
+}
