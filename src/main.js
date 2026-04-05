@@ -1,12 +1,13 @@
 const list = document.getElementById('games');
+const base = import.meta.env.BASE_URL;
 
-fetch('/games/games.json')
+fetch(`${base}games/games.json`)
   .then((r) => r.json())
   .then((games) => {
     for (const { slug, name } of games) {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = `/games/${slug}/index.html`;
+      a.href = `${base}games/${slug}/index.html`;
       a.textContent = name;
       li.appendChild(a);
       list.appendChild(li);
